@@ -61,9 +61,14 @@ public class Usuario  implements java.io.Serializable {
         this.contrasenhas = contrasenhas;
     }
 
-
-
-
+    @Override
+    public boolean equals(Object obj) {
+        Usuario u;
+        if(obj instanceof Usuario){
+            u = (Usuario) obj;
+            return u.idusuario == this.idusuario || u.scorreo.equals(this.scorreo) 
+                    || u.snombreusuario.equals(this.snombreusuario);
+        }
+        return false;
+    }
 }
-
-

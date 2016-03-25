@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2016 2:35:56 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Contrasenha" table="contrasenha" schema="public" optimistic-lock="version">
+        <id name="idcontrasenha" type="int">
+            <column name="idcontrasenha" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="usuario" class="Modelo.Usuario" fetch="select">
+            <column name="idusuario" />
+        </many-to-one>
+        <property name="scontrasenha" type="string">
+            <column name="scontrasenha" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

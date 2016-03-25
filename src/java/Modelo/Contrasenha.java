@@ -49,9 +49,4 @@ public class Contrasenha  implements java.io.Serializable {
         this.scontrasenha = scontrasenha;
     }
 
-
-
-
 }
-
-
