@@ -35,6 +35,7 @@ public class todeleteIni {
         for(Usuario u: users){
             s = u.getSnombreusuario() + "pass";
             c = new Contrasenha(id++, u, s);
+            pass.add(c);
         }
         return pass;
     }
